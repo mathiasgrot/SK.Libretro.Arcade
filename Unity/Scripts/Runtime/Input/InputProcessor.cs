@@ -51,6 +51,7 @@ namespace SK.Libretro.Unity
         }
 
         public short JoypadButton(int port, RETRO_DEVICE_ID_JOYPAD button) => _controls.TryGetValue(port, out PlayerInputProcessor processor) ? processor.JoypadHandler.IsButtonDown(button) : (short)0;
+
         public short JoypadButtons(int port)
         {
             if (!_controls.TryGetValue(port, out PlayerInputProcessor processor))
@@ -101,6 +102,8 @@ namespace SK.Libretro.Unity
             processor.Init(LeftStickBehaviour);
 
             _ = _controls.TryAdd(playerInput.playerIndex, processor);
+
+            playerInput.gameObject.name = $"Player_{playerInput.playerIndex + 1}"; // ADDED
             Debug.Log($"Player #{playerInput.playerIndex} joined ({playerInput.currentControlScheme}).");
         }
 

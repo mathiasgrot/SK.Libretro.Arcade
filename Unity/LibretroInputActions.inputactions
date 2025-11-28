@@ -328,6 +328,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ButtonStartCustom",
+                    "type": "Button",
+                    "id": "c0c5f7db-e311-4e8f-807a-466da745e9d0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -349,6 +358,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "ButtonStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "661c814b-995f-4668-a6d3-37a7c0d50c9f",
+                    "path": "<DualShockGamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ButtonStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51d19bfe-2588-4567-aa27-d100c931905e",
+                    "path": "<SwitchProControllerHID>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "ButtonStart",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -410,6 +441,28 @@
                 },
                 {
                     "name": "",
+                    "id": "a69ba791-8ef5-4185-bb31-4c46e1df9aa5",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e811da69-85dc-4ba1-86e8-be1322edd879",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "520058f1-f8ab-46b6-bdf6-78d68c2686c4",
                     "path": "<Keyboard>/numpad1",
                     "interactions": "",
@@ -437,6 +490,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Quest",
+                    "action": "ButtonB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35bb2b65-5d9e-4d30-8026-6f33affacc64",
+                    "path": "<DualShockGamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4cc85e0-5f39-40ad-a884-e15398ca22af",
+                    "path": "<XInputController>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "ButtonB",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -542,6 +617,28 @@
                 },
                 {
                     "name": "",
+                    "id": "1f898e33-3472-481f-a23a-87a2b625e3ea",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonL1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c1a40fd-6d03-4d74-b906-b20ab1c72d61",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonL1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3b885091-71a1-4282-b66c-403ebfd18816",
                     "path": "<Keyboard>/numpad3",
                     "interactions": "",
@@ -575,6 +672,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b94025e4-fbed-4a3d-b280-3f6aedcf738b",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f509da8e-45f9-43c3-9a1b-3541e8cfc910",
                     "path": "<Keyboard>/numpad4",
                     "interactions": "",
@@ -602,6 +710,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Quest",
+                    "action": "ButtonX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1258d50-f1dc-4a2c-9b5e-06c5d3f3fe17",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "ButtonX",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -657,6 +776,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Quest",
+                    "action": "ButtonR1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59df9b64-04aa-4a71-b504-3b3df3e5bba4",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonR1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d313ea7-fa98-4038-99ee-1f6bb21140ae",
+                    "path": "<DualShockGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "ButtonR1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -850,12 +991,111 @@
                 },
                 {
                     "name": "",
+                    "id": "6b6323f4-bb82-44cb-ae02-72ead2a26b03",
+                    "path": "<XInputController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bf88d73e-67aa-4a7b-a463-63ee6b738792",
                     "path": "<XRController>{LeftHand}/{SecondaryButton}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Quest",
+                    "groups": ";Quest",
                     "action": "ButtonSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84f1fc29-617d-4d55-ae67-3d8362eb8ff8",
+                    "path": "<DualShockGamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ButtonSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60b2774f-9d37-4752-b26c-2163e4f7d7b1",
+                    "path": "<XInputController>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ButtonSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f06ab99-36dd-499a-90b9-bd6cfd386f54",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2b5093b-ebf5-4bf3-aa7c-5cd4fb95de86",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd62f5cc-41f4-4631-a4b8-50b219a22fae",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4daa79fa-f5b6-4ea0-b8f0-299370816d84",
+                    "path": "<DualShockGamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87a2ef79-cb24-434a-b699-71b582a9ef6a",
+                    "path": "<SwitchProControllerHID>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "939d0e14-7237-4532-a650-011d771e264d",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Quest",
+                    "action": "ButtonStartCustom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

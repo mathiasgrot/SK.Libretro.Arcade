@@ -300,7 +300,9 @@ namespace SK.Libretro.Unity
                     double dt = currentTime - startTime;
                     startTime = currentTime;
 
-                    double targetFrameTime = /*FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : */gameFrameTime;
+                    // double targetFrameTime = /*FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : */gameFrameTime;
+                    double targetFrameTime = FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : gameFrameTime;
+
                     if ((accumulator += dt) >= targetFrameTime)
                     {
                         _wrapper.RunFrame();
@@ -406,7 +408,7 @@ namespace SK.Libretro.Unity
             => _bridgeCommands.Enqueue(new SaveStateWithoutScreenshotBridgeCommand());
 
         public void LoadState()
-            => _bridgeCommands.Enqueue(new LoadStateBridgeCommand());
+            => _bridgeCommands.Enqueue(new LoadStateBridgeCommand(_wrapper)); // wrapper added
 
         public void SetDiskIndex(int index)
             => _bridgeCommands.Enqueue(new SetDiskIndexBridgeCommand(_wrapper, _gamesDirectory, _gameNames, index));
@@ -534,6 +536,25 @@ namespace SK.Libretro.Unity
             using AndroidJavaObject currentActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
             using AndroidJavaObject getFilesDir     = currentActivity.Call<AndroidJavaObject>("getFilesDir");
             return getFilesDir.Call<string>("getCanonicalPath");
+        }
+
+
+        // added
+        public byte GetProgramMemory(uint address)
+        {
+            lock (_lock)
+                return _wrapper.Core.GetMainCpuByte(address);
+        }
+
+        public IntPtr GetProgramMemoryRange(ulong startAddress, ulong length)
+        {
+            lock (_lock)
+                return _wrapper.Core.GetMainCpuRange(startAddress, length);
+        }
+
+        public void SendMAMEInput(string port, string field, int frames)
+        {
+            _wrapper.Core.SendMAMEInput(port, field, frames);
         }
     }
 }

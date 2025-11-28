@@ -168,4 +168,14 @@ namespace SK.Libretro.Header
     // API size_t retro_get_memory_size(unsigned id);
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate nuint retro_get_memory_size_t(RETRO_MEMORY id);
+
+    // ADDED 
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate byte retro_get_maincpu_byte_t(uint address);
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate IntPtr retro_get_maincpu_range_t(ulong start, ulong length);
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate IntPtr retro_set_mame_input_t(string port, string field, int frames);
 }

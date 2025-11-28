@@ -41,6 +41,9 @@ namespace SK.Libretro
 
         public ReadOnlySpan<byte> GetVideoMemory() => GetRam(RETRO_MEMORY.VIDEO_RAM);
 
+
+
+
         public bool SetMemoryMaps(IntPtr data)
         {
             if (data.IsNull())
@@ -57,5 +60,6 @@ namespace SK.Libretro
                  ? new(_wrapper.Core.GetMemoryData(type).ToPointer(), len)
                  : ReadOnlySpan<byte>.Empty;
         }
+
     }
 }

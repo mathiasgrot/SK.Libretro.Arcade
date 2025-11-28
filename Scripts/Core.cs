@@ -64,6 +64,11 @@ namespace SK.Libretro
         private retro_get_region_t _retro_get_region;
         private retro_get_memory_data_t _retro_get_memory_data;
         private retro_get_memory_size_t _retro_get_memory_size;
+        
+        // added
+        private retro_get_maincpu_byte_t _retro_get_maincpu_byte;
+        private retro_get_maincpu_range_t _retro_get_maincpu_range;
+        private retro_set_mame_input_t _retro_set_mame_input;
 
         private retro_set_environment_t _retro_set_environment;
         private retro_set_video_refresh_t _retro_set_video_refresh;
@@ -274,6 +279,11 @@ namespace SK.Libretro
                 _retro_get_memory_data            = _dll.GetFunction<retro_get_memory_data_t>("retro_get_memory_data");
                 _retro_get_memory_size            = _dll.GetFunction<retro_get_memory_size_t>("retro_get_memory_size");
                 
+                // added
+                _retro_get_maincpu_byte           = _dll.GetFunction<retro_get_maincpu_byte_t>("retro_get_maincpu_byte");
+                _retro_get_maincpu_range          = _dll.GetFunction<retro_get_maincpu_range_t>("retro_get_maincpu_range");
+                _retro_set_mame_input           = _dll.GetFunction<retro_set_mame_input_t>("retro_set_mame_input");
+                
                 _retro_set_environment            = _dll.GetFunction<retro_set_environment_t>("retro_set_environment");
                 _retro_set_video_refresh          = _dll.GetFunction<retro_set_video_refresh_t>("retro_set_video_refresh");
                 _retro_set_audio_sample           = _dll.GetFunction<retro_set_audio_sample_t>("retro_set_audio_sample");
@@ -304,5 +314,10 @@ namespace SK.Libretro
             _wrapper.AudioHandler.SetCoreCallbacks(_retro_set_audio_sample, _retro_set_audio_sample_batch);
             _wrapper.InputHandler.SetCoreCallbacks(_retro_set_input_poll, _retro_set_input_state);
         }
+
+        // Added
+        public byte GetMainCpuByte(uint address) => _retro_get_maincpu_byte(address);
+        public IntPtr GetMainCpuRange(ulong start, ulong length) => _retro_get_maincpu_range(start, length);
+        public void SendMAMEInput(string port, string field, int frames) => _retro_set_mame_input(port, field, frames);
     }
 }

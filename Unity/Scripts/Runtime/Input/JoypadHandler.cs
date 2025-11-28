@@ -30,6 +30,7 @@ namespace SK.Libretro.Unity
     {
         public readonly short[] Buttons = new short[16];
 
+
         private readonly InputActionMap _inputActionMap;
 
         public JoypadHandler(InputActionMap inputActionMap)

@@ -358,7 +358,6 @@ namespace SK.Libretro
                 return 0;
 
             device &= (RETRO_DEVICE)RETRO.DEVICE_MASK;
-
             return device switch
             {
                 RETRO_DEVICE.JOYPAD   => ProcessJoypadDevice(port, (RETRO_DEVICE_ID_JOYPAD)id),

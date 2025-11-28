@@ -54,8 +54,9 @@ namespace SK.Libretro.Unity
 
         public void Update()
         {
-            for (uint i = 0; i < NUM_KEYBOARD_KEYS; ++i)
+            for (uint i = 0; i < NUM_KEYBOARD_KEYS; ++i){
                 _keys[i] = (short)(Input.GetKey((KeyCode)i) ? 1 : 0);
+            }
         }
     }
 }
