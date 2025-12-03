@@ -68,6 +68,7 @@ namespace SK.Libretro
         // added
         private retro_get_maincpu_byte_t _retro_get_maincpu_byte;
         private retro_get_maincpu_range_t _retro_get_maincpu_range;
+        private retro_set_maincpu_range_t _retro_set_maincpu_range;
         private retro_set_mame_input_t _retro_set_mame_input;
 
         private retro_set_environment_t _retro_set_environment;
@@ -282,7 +283,8 @@ namespace SK.Libretro
                 // added
                 _retro_get_maincpu_byte           = _dll.GetFunction<retro_get_maincpu_byte_t>("retro_get_maincpu_byte");
                 _retro_get_maincpu_range          = _dll.GetFunction<retro_get_maincpu_range_t>("retro_get_maincpu_range");
-                _retro_set_mame_input           = _dll.GetFunction<retro_set_mame_input_t>("retro_set_mame_input");
+                _retro_set_maincpu_range          = _dll.GetFunction<retro_set_maincpu_range_t>("retro_set_maincpu_range");
+                _retro_set_mame_input             = _dll.GetFunction<retro_set_mame_input_t>("retro_set_mame_input");
                 
                 _retro_set_environment            = _dll.GetFunction<retro_set_environment_t>("retro_set_environment");
                 _retro_set_video_refresh          = _dll.GetFunction<retro_set_video_refresh_t>("retro_set_video_refresh");
@@ -316,8 +318,25 @@ namespace SK.Libretro
         }
 
         // Added
-        public byte GetMainCpuByte(uint address) => _retro_get_maincpu_byte(address);
-        public IntPtr GetMainCpuRange(ulong start, ulong length) => _retro_get_maincpu_range(start, length);
+        public byte GetMainCpuByte(ulong address) => _retro_get_maincpu_byte(address);
+        
+        public byte[] GetMainCpuRange(ulong start, ulong length)
+        {
+            byte[] buffer = new byte[length];// managed buffer
+            var handle = GCHandle.Alloc(buffer, GCHandleType.Pinned); // pin it so GC doesn't move it
+            try
+            {
+                bool success = _retro_get_maincpu_range(start, handle.AddrOfPinnedObject(), length); // fills buffer
+            }
+            finally
+            {
+                handle.Free();
+            }
+            return buffer; // return managed copy
+        }
+        
+        public void SetMainCpuRange(ulong address, byte[] data, ulong length) => _retro_set_maincpu_range(address, data, length);
+
         public void SendMAMEInput(string port, string field, int frames) => _retro_set_mame_input(port, field, frames);
     }
 }

@@ -540,16 +540,21 @@ namespace SK.Libretro.Unity
 
 
         // added
-        public byte GetProgramMemory(uint address)
+        public byte GetProgramMemory(ulong address)
         {
             lock (_lock)
                 return _wrapper.Core.GetMainCpuByte(address);
         }
 
-        public IntPtr GetProgramMemoryRange(ulong startAddress, ulong length)
+        public byte[] GetProgramMemoryRange(ulong startAddress, ulong length)
         {
             lock (_lock)
                 return _wrapper.Core.GetMainCpuRange(startAddress, length);
+        }
+
+        public void SetProgramMemoryRange(ulong startAddress, byte[] data, ulong length)
+        {
+            _wrapper.Core.SetMainCpuRange(startAddress, data, length);
         }
 
         public void SendMAMEInput(string port, string field, int frames)

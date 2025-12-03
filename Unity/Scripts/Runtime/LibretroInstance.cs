@@ -180,9 +180,11 @@ namespace SK.Libretro.Unity
         public ReadOnlySpan<byte> GetVideoMemory() => _bridge.GetVideoMemory();
 
         // added
-        public byte GetProgramMemory(uint _address) => _bridge.GetProgramMemory(_address);
-        
-        public IntPtr GetProgramMemoryRange(ulong _address, ulong length) => _bridge.GetProgramMemoryRange(_address, length);
+        public byte GetProgramMemory(ulong _address) => _bridge.GetProgramMemory(_address);
+
+        public byte[] GetProgramMemoryRange(ulong _address, ulong length) => _bridge.GetProgramMemoryRange(_address, length);
+
+        public void SetProgramMemoryRange(ulong _address, byte[] _data, ulong length) => _bridge.SetProgramMemoryRange(_address, _data, length);
 
         public void SendMAMEInput(string port, string field, int frames) => _bridge.SendMAMEInput(port, field, frames);
         

@@ -171,11 +171,14 @@ namespace SK.Libretro.Header
 
     // ADDED 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate byte retro_get_maincpu_byte_t(uint address);
+    internal delegate byte retro_get_maincpu_byte_t(ulong address);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate IntPtr retro_get_maincpu_range_t(ulong start, ulong length);
+    internal delegate bool retro_get_maincpu_range_t(ulong start, IntPtr outBuffer, ulong length);
+    
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate void retro_set_maincpu_range_t(ulong address, byte[] data, ulong length);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate IntPtr retro_set_mame_input_t(string port, string field, int frames);
+    internal delegate void retro_set_mame_input_t(string port, string field, int frames);
 }
