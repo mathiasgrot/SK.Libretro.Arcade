@@ -98,7 +98,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "",
                     "action": "StickLeft",
                     "isComposite": false,
                     "isPartOfComposite": true
