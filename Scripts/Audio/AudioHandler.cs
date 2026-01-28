@@ -173,5 +173,12 @@ namespace SK.Libretro
             audioHandler._processor.ProcessSampleBatch(data, frames, positionalData);
             return frames;
         }
+
+        // ADDED
+        public void FlushOnFastForward(bool fastForward)
+        {
+            _processor.SetFastForward(fastForward);
+        }
+
     }
 }

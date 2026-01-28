@@ -74,6 +74,20 @@ namespace SK.Libretro.Unity
             }
         }
 
+        // public bool FastForward
+        // {
+        //     get
+        //     {
+        //         lock (_lock)
+        //             return _fastForward;
+        //     }
+        //     set
+        //     {
+        //         lock (_lock)
+        //             _fastForward = value;
+        //     }
+        // }
+
         public bool FastForward
         {
             get
@@ -83,10 +97,24 @@ namespace SK.Libretro.Unity
             }
             set
             {
+                bool changed;
                 lock (_lock)
+                {
+                    changed = _fastForward != value;
                     _fastForward = value;
+                }
+
+                if (!changed)
+                    return;
+
+                // 1. Stop libretro from sending samples
+                _wrapper.AudioHandler.Enabled = !value;
+
+                // 2. Tell the audio backend (Unity / SDL / Null) to react appropriately
+                _wrapper.AudioHandler.FlushOnFastForward(value);
             }
         }
+
 
         public bool Rewind
         {
@@ -300,7 +328,7 @@ namespace SK.Libretro.Unity
                     double dt = currentTime - startTime;
                     startTime = currentTime;
 
-                    // double targetFrameTime = /*FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : */gameFrameTime;
+                    // double targetFrameTime = /*FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : */ gameFrameTime;
                     double targetFrameTime = FastForward && FastForwardFactor > 0 ? gameFrameTime / FastForwardFactor : gameFrameTime;
 
                     if ((accumulator += dt) >= targetFrameTime)

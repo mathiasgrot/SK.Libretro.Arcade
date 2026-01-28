@@ -31,5 +31,8 @@ namespace SK.Libretro
         public void ProcessSample(short left, short right) { }
         public void ProcessSampleBatch(IntPtr data, nuint frames, PositionalData positionalData) { }
         public void FinalizeFrame() { }
+
+        public void SetFastForward(bool enabled) { }
+
     }
 }

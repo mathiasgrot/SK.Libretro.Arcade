@@ -138,5 +138,11 @@ namespace SK.Libretro
                 _ = SDL.PutAudioStreamData(_audioStream, data, numSamples);
             }
         }
+
+        // ADDED
+        public void SetFastForward(bool enabled)
+        {
+            // SDL backend: ignore fast-forward audio
+        }
     }
 }
