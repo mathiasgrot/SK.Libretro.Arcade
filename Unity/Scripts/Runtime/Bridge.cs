@@ -107,6 +107,10 @@ namespace SK.Libretro.Unity
                 if (!changed)
                     return;
 
+                if(_wrapper.AudioHandler == null)
+                    return;
+
+
                 // 1. Stop libretro from sending samples
                 _wrapper.AudioHandler.Enabled = !value;
 
@@ -589,5 +593,18 @@ namespace SK.Libretro.Unity
         {
             _wrapper.Core.SendMAMEInput(port, field, frames);
         }
+
+        public void UnloadGame()
+        {
+            _wrapper.Core.UnloadGame();
+        }
+
+        public void ReloadGame(string[] gameNames)
+       {
+           if (!Running)
+               return;
+           _bridgeCommands.Enqueue(
+               new ReloadMameGameCommand(_wrapper, _gamesDirectory, gameNames)
+           );
     }
 }
