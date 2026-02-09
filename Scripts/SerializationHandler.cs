@@ -40,6 +40,7 @@ namespace SK.Libretro
         private string _gameDirectory;
         private int _currentStateSlot;
 
+
         public SerializationHandler(Wrapper wrapper)
         {
             _wrapper = wrapper;

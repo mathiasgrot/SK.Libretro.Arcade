@@ -319,21 +319,27 @@ namespace SK.Libretro
 
         // Added
         public byte GetMainCpuByte(ulong address) => _retro_get_maincpu_byte(address);
-        
-        public byte[] GetMainCpuRange(ulong start, ulong length)
+
+        public void GetMainCpuRange(ulong start, IntPtr dest, ulong length)
         {
-            byte[] buffer = new byte[length];// managed buffer
-            var handle = GCHandle.Alloc(buffer, GCHandleType.Pinned); // pin it so GC doesn't move it
-            try
-            {
-                bool success = _retro_get_maincpu_range(start, handle.AddrOfPinnedObject(), length); // fills buffer
-            }
-            finally
-            {
-                handle.Free();
-            }
-            return buffer; // return managed copy
+            _retro_get_maincpu_range(start, dest, length);
         }
+
+        
+        // public byte[] GetMainCpuRange(ulong start, ulong length)
+        // {
+        //     byte[] buffer = new byte[length];// managed buffer
+        //     var handle = GCHandle.Alloc(buffer, GCHandleType.Pinned); // pin it so GC doesn't move it
+        //     try
+        //     {
+        //         bool success = _retro_get_maincpu_range(start, handle.AddrOfPinnedObject(), length); // fills buffer
+        //     }
+        //     finally
+        //     {
+        //         handle.Free();
+        //     }
+        //     return buffer; // return managed copy
+        // }
         
         public void SetMainCpuRange(ulong address, byte[] data, ulong length) => _retro_set_maincpu_range(address, data, length);
 

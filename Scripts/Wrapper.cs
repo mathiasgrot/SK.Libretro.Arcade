@@ -275,27 +275,5 @@ namespace SK.Libretro
             _frameTimeLast = current;
             FrameTimeInterfaceCallback(delta * 1000);
         }
-
-    // ADDED
-       public void StopGameOnly()
-       {
-           if (!Game.Running)
-               return;
-           Game.Dispose();
-       }
-       
-       public bool LoadGameOnly(string gameDirectory, string[] gameNames)
-       {
-           Game.Dispose();
-           Game = new Game(this, gameDirectory, gameNames);
-           if (!Game.Start())
-               return false;
-           if (DiskHandler.Enabled)
-               for (int i = 0; i < Game.Names.Length; ++i)
-                   _ = DiskHandler.AddImageIndex();
-           SerializationHandler.Init();
-           FrameTimeRestart();
-           return true;
-       }
     }
 }

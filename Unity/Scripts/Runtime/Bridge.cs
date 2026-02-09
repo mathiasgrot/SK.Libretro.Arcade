@@ -107,7 +107,7 @@ namespace SK.Libretro.Unity
                 if (!changed)
                     return;
 
-                if(_wrapper.AudioHandler == null)
+                if (_wrapper == null || _wrapper.AudioHandler == null)
                     return;
 
 
@@ -407,16 +407,16 @@ namespace SK.Libretro.Unity
 
         public void ResetContent()
         {
-            //if (!Running)
-            //    return;
+            if (!Running)
+               return;
 
-            //if (Paused)
-            //    ResumeContent();
+            if (Paused)
+               ResumeContent();
 
-            //Running = false;
+            // Running = false;
 
-            //lock (_lock)
-            //    _wrapper?.ResetContent();
+            lock (_lock)
+               _wrapper?.ResetContent();
         }
 
         public void StopContent()
@@ -578,14 +578,25 @@ namespace SK.Libretro.Unity
                 return _wrapper.Core.GetMainCpuByte(address);
         }
 
-        public byte[] GetProgramMemoryRange(ulong startAddress, ulong length)
+        public void GetProgramMemoryRange(ulong startAddress, IntPtr _dest, ulong length)
         {
-            lock (_lock)
-                return _wrapper.Core.GetMainCpuRange(startAddress, length);
+            _wrapper.Core.GetMainCpuRange(startAddress, _dest, length);
         }
+
+        // public byte[] GetProgramMemoryRange(ulong startAddress, ulong length)
+        // {
+        //     lock (_lock)
+        //         return _wrapper.Core.GetMainCpuRange(startAddress, length);
+        // }
 
         public void SetProgramMemoryRange(ulong startAddress, byte[] data, ulong length)
         {
+            if (_wrapper?.Core == null || !_wrapper.Core.Initialized)
+            {
+                Debug.Log("Core is not initialized");
+                return;
+            }
+
             _wrapper.Core.SetMainCpuRange(startAddress, data, length);
         }
 
@@ -593,18 +604,5 @@ namespace SK.Libretro.Unity
         {
             _wrapper.Core.SendMAMEInput(port, field, frames);
         }
-
-        public void UnloadGame()
-        {
-            _wrapper.Core.UnloadGame();
-        }
-
-        public void ReloadGame(string[] gameNames)
-       {
-           if (!Running)
-               return;
-           _bridgeCommands.Enqueue(
-               new ReloadMameGameCommand(_wrapper, _gamesDirectory, gameNames)
-           );
     }
 }

@@ -182,7 +182,7 @@ namespace SK.Libretro.Unity
         // added
         public byte GetProgramMemory(ulong _address) => _bridge.GetProgramMemory(_address);
 
-        public byte[] GetProgramMemoryRange(ulong _address, ulong length) => _bridge.GetProgramMemoryRange(_address, length);
+        public void GetProgramMemoryRange(ulong _address, IntPtr _dest, ulong length) => _bridge.GetProgramMemoryRange(_address, _dest, length);
 
         public void SetProgramMemoryRange(ulong _address, byte[] _data, ulong length) => _bridge.SetProgramMemoryRange(_address, _data, length);
 
