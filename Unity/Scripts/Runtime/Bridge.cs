@@ -604,5 +604,10 @@ namespace SK.Libretro.Unity
         {
             _wrapper.Core.SendMAMEInput(port, field, frames);
         }
+
+        public void SetMainCPUTag(string tag = "maincpu")
+        {
+            _wrapper.Core.SetMainCPUTag(tag);
+        }
     }
 }

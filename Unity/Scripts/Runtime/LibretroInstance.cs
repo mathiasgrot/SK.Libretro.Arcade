@@ -187,6 +187,8 @@ namespace SK.Libretro.Unity
         public void SetProgramMemoryRange(ulong _address, byte[] _data, ulong length) => _bridge.SetProgramMemoryRange(_address, _data, length);
 
         public void SendMAMEInput(string port, string field, int frames) => _bridge.SendMAMEInput(port, field, frames);
+
+        public void SetMainCPUTag(string _tag) => _bridge.SetMainCPUTag(_tag);
         
     }
 }

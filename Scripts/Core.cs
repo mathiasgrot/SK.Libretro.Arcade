@@ -70,6 +70,7 @@ namespace SK.Libretro
         private retro_get_maincpu_range_t _retro_get_maincpu_range;
         private retro_set_maincpu_range_t _retro_set_maincpu_range;
         private retro_set_mame_input_t _retro_set_mame_input;
+        private retro_set_maincpu_tag_t _retro_set_maincpu_tag;
 
         private retro_set_environment_t _retro_set_environment;
         private retro_set_video_refresh_t _retro_set_video_refresh;
@@ -285,7 +286,8 @@ namespace SK.Libretro
                 _retro_get_maincpu_range          = _dll.GetFunction<retro_get_maincpu_range_t>("retro_get_maincpu_range");
                 _retro_set_maincpu_range          = _dll.GetFunction<retro_set_maincpu_range_t>("retro_set_maincpu_range");
                 _retro_set_mame_input             = _dll.GetFunction<retro_set_mame_input_t>("retro_set_mame_input");
-                
+                _retro_set_maincpu_tag             = _dll.GetFunction<retro_set_maincpu_tag_t>("retro_set_maincpu_tag");
+
                 _retro_set_environment            = _dll.GetFunction<retro_set_environment_t>("retro_set_environment");
                 _retro_set_video_refresh          = _dll.GetFunction<retro_set_video_refresh_t>("retro_set_video_refresh");
                 _retro_set_audio_sample           = _dll.GetFunction<retro_set_audio_sample_t>("retro_set_audio_sample");
@@ -344,5 +346,7 @@ namespace SK.Libretro
         public void SetMainCpuRange(ulong address, byte[] data, ulong length) => _retro_set_maincpu_range(address, data, length);
 
         public void SendMAMEInput(string port, string field, int frames) => _retro_set_mame_input(port, field, frames);
+    
+        public void SetMainCPUTag(string tag) => _retro_set_maincpu_tag(tag);
     }
 }

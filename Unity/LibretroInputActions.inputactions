@@ -98,7 +98,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "",
                     "action": "StickLeft",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -442,6 +442,28 @@
                 },
                 {
                     "name": "",
+                    "id": "85232fc3-0b2c-4bfb-bce1-cca6cd85d614",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #1>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f28ebf88-90ab-481f-ae9f-35cd98888515",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P2",
+                    "action": "ButtonA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "eae79e73-df6f-4a59-b244-5d897450a0de",
                     "path": "<XRController>{RightHand}/{TriggerButton}",
                     "interactions": "",
@@ -497,6 +519,28 @@
                 },
                 {
                     "name": "",
+                    "id": "1e15b663-52ea-4acf-b5a5-1b8154770386",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #1>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e6c4b67-cf63-43e9-ab18-b7fce65c2fab",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "14bc8992-ed2c-4e1d-a209-5b37eaa862a7",
                     "path": "<Keyboard>/c",
                     "interactions": "",
@@ -513,6 +557,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "ButtonR3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99f4cc9b-38a5-4146-9fc6-13c3d1df84b0",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P1",
                     "action": "ButtonR3",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -536,6 +591,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ButtonR2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5c65fc0-d892-417e-b641-92ef2f5afc8a",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P1",
+                    "action": "ButtonR2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20fc88fb-5cf3-42ae-a7ef-0e2372ff4af2",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P1",
+                    "action": "ButtonL2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -673,6 +750,17 @@
                 },
                 {
                     "name": "",
+                    "id": "defdd470-ead8-468e-9b19-8b52d78bd6fd",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "abc73b43-02fc-411e-b057-0c12cf31bc98",
                     "path": "<XRController>{LeftHand}/{GripButton}",
                     "interactions": "",
@@ -723,6 +811,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ButtonX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94296ef7-e784-4075-a7ed-fcaae1366143",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71b5368f-22a4-4162-9bfc-44580622eda0",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P1",
+                    "action": "ButtonL3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -849,6 +959,39 @@
                 },
                 {
                     "name": "",
+                    "id": "781cb070-a33f-4878-b5f8-97a852a5f86d",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f91ca3c7-c289-4077-b35f-594678171e3b",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3276097c-926a-40d8-8da7-862bd272d2e1",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/hat/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P2",
+                    "action": "DPadUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6c39dc79-e9a2-42b1-87de-0d237cff326e",
                     "path": "<QuestTouchPlusController>/thumbstick/down",
                     "interactions": "",
@@ -887,6 +1030,39 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "DPadDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4a9994a-79f1-492e-8207-16f5fe63a210",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c1d5f9e-c175-40b1-89ff-3119b7decdc4",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4f759db-b97d-4cde-aff1-b5f874525d79",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/hat/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P2",
                     "action": "DPadDown",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -937,6 +1113,39 @@
                 },
                 {
                     "name": "",
+                    "id": "269049f7-2cc1-4663-b0b5-bae271732c21",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6de66ff7-08ba-45ef-b554-86c57eafa4a8",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "444a8658-78b4-4b6a-a05d-a9d501f6d720",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick_P2",
+                    "action": "DPadLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "86f9365e-22c1-49ad-b0f7-5cd2a4c6e4b4",
                     "path": "<QuestTouchPlusController>/thumbstick/right",
                     "interactions": "",
@@ -981,6 +1190,39 @@
                 },
                 {
                     "name": "",
+                    "id": "fa1368e2-d027-481f-beca-5a72d7664bd2",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77e00428-935c-43d5-b106-859e99c9dfbe",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84c47c2c-cee7-4df9-9ce3-e70b86870ccc",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6b6323f4-bb82-44cb-ae02-72ead2a26b03",
                     "path": "<XInputController>/start",
                     "interactions": "",
@@ -994,6 +1236,28 @@
                     "name": "",
                     "id": "4080f0f5-7fad-4042-83bd-67a944457d9c",
                     "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a8ff903-8de1-4532-9c03-f393279e38a2",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #1>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edd8e113-33ee-4740-b54f-b7cb25f8f029",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/button6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1047,17 +1311,6 @@
                 },
                 {
                     "name": "",
-                    "id": "3f06ab99-36dd-499a-90b9-bd6cfd386f54",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ButtonStartCustom",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "939d0e14-7237-4532-a650-011d771e264d",
                     "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
@@ -1104,6 +1357,28 @@
                     "name": "",
                     "id": "2ddc1eb6-2164-4fb7-8fee-554b720d58e6",
                     "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3801de23-b247-47cf-b8a5-998894bb679f",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #1>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonStartCustom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f06ab99-36dd-499a-90b9-bd6cfd386f54",
+                    "path": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>/button6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1195,6 +1470,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6e2e2a4f-4fbf-4a7d-be50-241a3d68c1dd",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PositionDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "96e68876-1f6f-4821-a94f-a0c3ca593252",
                     "path": "<Mouse>/scroll",
                     "interactions": "",
@@ -1232,7 +1518,18 @@
                     "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse;Joystick_P1;Joystick_P2",
+                    "action": "ButtonMiddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45b85bfd-b957-4178-8843-82f260fdd113",
+                    "path": "<Keyboard>/backslash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse;Joystick_P1;Joystick_P2",
                     "action": "ButtonMiddle",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1630,6 +1927,53 @@
                 {
                     "devicePath": "<XRController>{RightHand}/{Device}",
                     "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Joystick_P1",
+            "bindingGroup": "Joystick_P1",
+            "devices": [
+                {
+                    "devicePath": "<HID::Baolian industry Co., Ltd TS-RT-JK #1>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Joystick_P2",
+            "bindingGroup": "Joystick_P2",
+            "devices": [
+                {
+                    "devicePath": "<HID::Baolian industry Co., Ltd TS-RT-JK #2>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

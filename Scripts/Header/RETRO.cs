@@ -181,4 +181,7 @@ namespace SK.Libretro.Header
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal delegate void retro_set_mame_input_t(string port, string field, int frames);
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    internal delegate void retro_set_maincpu_tag_t(string tag);
 }

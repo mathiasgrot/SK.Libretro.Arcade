@@ -205,7 +205,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. */
 
- using System;
+using System;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
@@ -246,13 +246,23 @@ namespace SK.Libretro.Unity
                     return;
                 }
 
-                for (int i = 0; i < data.Length; ++i)
+                // Target: keep buffer at ~50ms worth of samples
+                int targetBufferSize = (int)(_outputSampleRate * 2 * 0.05f);
+                
+                // If we're way ahead, skip old samples to resync
+                int excess = _circularBuffer.Length - (data.Length + targetBufferSize);
+                if (excess > 0)
                 {
-                    if (_circularBuffer.Length > 0)
-                        data[i] = _circularBuffer.Dequeue();
-                    else
-                        data[i] = 0f;
+                    for (int i = 0; i < excess; i++)
+                    {
+                        // Debug.Log("discarding stale audio");
+                        _circularBuffer.Dequeue(); // discard stale audio
+
+                    }
                 }
+
+                for (int i = 0; i < data.Length; ++i)
+                    data[i] = _circularBuffer.Length > 0 ? _circularBuffer.Dequeue() : 0f;
             }
         }
 
@@ -278,7 +288,7 @@ namespace SK.Libretro.Unity
                 _inputSampleRate = sampleRate;
                 _outputSampleRate = AudioSettings.outputSampleRate;
 
-                InitBuffer(_outputSampleRate, 2, 3.0f);
+                InitBuffer(_outputSampleRate, 2, 0.5f);
 
                 _isInitialized = true;
                 _audioSource.Play();
