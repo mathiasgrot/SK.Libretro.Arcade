@@ -3,6 +3,7 @@ Libretro wrapper written in C# with support for the Unity game engine
 
 ## Added functionality
 Read main cpu game memory to detect game states, send commands through emulator IO ports.
+Please note: this is only compatible with a specific version of MAME
 
 ## Installation
 Add this package to your project: Window->Package Manager->'+'Icon->Add package from git URL...->https://github.com/mathiasgrot/SK.Libretro.Arcade.git
